@@ -1,0 +1,44 @@
+[
+    {
+        "fname": "Frank",
+        "lname": "Gallo",
+        "email": "frankgallo@gmail.com",
+        "password": "Password"
+    },
+    {
+        "fname": "Chuck",
+        "lname": "Finley",
+        "email": "chuckfinley@gmail.com",
+        "password": "Password"
+    },
+    {
+        "fname": "Oscar",
+        "lname": "Vaughn",
+        "email": "oscarvaughn@gmail.com",
+        "password": "Password"
+    },
+    {
+        "fname": "Lula",
+        "lname": "Wallace",
+        "email": "lulawallace@gmail.com",
+        "password": "Password"
+    },
+    {
+        "fname": "Theodore",
+        "lname": "Black",
+        "email": "theoblack@gmail.com",
+        "password": "Password"
+    },
+    {
+        "fname": "Jordanne",
+        "lname": "Aguirre",
+        "email": "jordanneaguirre@gmail.com",
+        "password": "Password"
+    },
+    {
+        "fname": "Jessica",
+        "lname": "Ware",
+        "email": "jessicaware@gmail.com",
+        "password": "Password"
+    }
+]

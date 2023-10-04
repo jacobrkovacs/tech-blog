@@ -30,6 +30,7 @@ Blogpost.init(
                 model: 'user',
                 key: 'id',
             },
+            allowNull: false
         },
     },
     {
