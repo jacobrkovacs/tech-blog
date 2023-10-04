@@ -23,6 +23,13 @@ Comment.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
+                model: 'user',
+                key: 'id',
+            },
+        },
+        blogpost_id: {
+            type: DataTypes.INTEGER,
+            references: {
                 model: 'blogpost',
                 key: 'id',
             },
@@ -35,4 +42,6 @@ Comment.init(
         underscored: true,
         modelName: 'comment',
     }
-)
+);
+
+module.exports = Comment;
