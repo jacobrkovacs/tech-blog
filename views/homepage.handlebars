@@ -1,0 +1,19 @@
+<div class="row container">
+    <div>
+        <h3>Recent Posts:</h3>
+        <br>
+
+        {{#each blogpost as |blog|}}
+        <div class=" card my-3 mx-3 ">
+            <h4 class="card-header">{{blog.title}}</h4>
+            <div class="card-body">
+                <small>Written by: {{blog.user.fname}} {{blog.user.lname}}</small>
+                <hr>
+                <p>{{blog.content}}</p>
+                <button class="btn">See Replies</button>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+</div>
