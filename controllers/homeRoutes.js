@@ -16,6 +16,19 @@ router.get('/', async (req, res) => {
     } catch (err) {
         res.status(400).json(err)
     }
+});
+
+router.get('/login', (req, res) => {
+    try {
+        if(req.session.logged_in) {
+            res.redirect('/profile');
+            return;
+        }
+
+        res.render('login')
+    } catch (err) {
+        res.status(400).json(err)
+    }
 })
 
 module.exports = router;

@@ -1,0 +1,12 @@
+.container {
+    max-width: 1400px;
+}
+
+.card {
+    padding: 0;
+    min-width: 500px ;
+}
+
+.card-header {
+    min-height: 5rem;
+}
