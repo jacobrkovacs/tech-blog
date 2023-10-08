@@ -31,4 +31,17 @@ router.get('/login', (req, res) => {
     }
 })
 
+router.get('/signup', (req, res) => {
+    try {
+        if(req.session.logged_in) {
+            res.redirect('/profile');
+            return;
+        }
+
+        res.render('signup')
+    } catch (err) {
+        res.status(400).json(err)
+    }
+})
+
 module.exports = router;

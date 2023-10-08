@@ -9,9 +9,13 @@
                 <small>Written by: {{blog.user.fname}} {{blog.user.lname}}</small>
                 <hr>
                 <p>{{blog.content}}</p>
-                {{#unless logged_in}}
+                {{!-- {{#unless logged_in}}
                 <button class="btn" href="/login">See Replies</button>
-                {{/unless}}
+                {{/unless}} --}}
+
+                {{#if logged_in}}
+                <a class="btn" href="/login">See Replies</a>
+                {{/if}}
             </div>
 
         </div>

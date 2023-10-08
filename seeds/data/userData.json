@@ -2,42 +2,49 @@
     {
         "fname": "Frank",
         "lname": "Gallo",
+        "username": "fg123",
         "email": "frankgallo@gmail.com",
         "password": "Password"
     },
     {
         "fname": "Chuck",
         "lname": "Finley",
+        "username": "chuckyf987",
         "email": "chuckfinley@gmail.com",
         "password": "Password"
     },
     {
         "fname": "Oscar",
         "lname": "Vaughn",
+        "username": "vaughnthemaughn",
         "email": "oscarvaughn@gmail.com",
         "password": "Password"
     },
     {
         "fname": "Lula",
         "lname": "Wallace",
+        "username": "lulawall21",
         "email": "lulawallace@gmail.com",
         "password": "Password"
     },
     {
         "fname": "Theodore",
         "lname": "Black",
+        "username": "theoblack",
         "email": "theoblack@gmail.com",
         "password": "Password"
     },
     {
         "fname": "Jordanne",
         "lname": "Aguirre",
+        "username": "jordannea",
         "email": "jordanneaguirre@gmail.com",
         "password": "Password"
     },
     {
         "fname": "Jessica",
         "lname": "Ware",
+        "username": "jessilverWare",
         "email": "jessicaware@gmail.com",
         "password": "Password"
     }

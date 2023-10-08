@@ -18,16 +18,23 @@ User.init(
         },
         fname: {
           type: DataTypes.STRING,
-          allowNull: false,
+          allowNull: true,
           validate: {
             isAlpha: true,
           }
         },
         lname: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             validate: {
               isAlpha: true,
+            }
+          },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+              isAlphanumeric: true,
             }
           },
         email: {
