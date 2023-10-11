@@ -10,11 +10,11 @@
                 <hr>
                 <p>{{blog.content}}</p>
                 {{#unless logged_in}}
-                <button class="btn" href="/login">See Replies</button>
+                <button class="btn" href="/login">See Comments</button>
                 {{/unless}}
 
                 {{#if logged_in}}
-                <a class="btn" href="/login">See Replies</a>
+                <a class="btn" href="/login">See Comments</a>
                 {{/if}}
             </div>
 

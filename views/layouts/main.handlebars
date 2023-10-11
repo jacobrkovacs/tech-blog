@@ -29,9 +29,9 @@
               {{/unless}}
               {{#if logged_in}}
               <li class="nav-item">
-                <a class="nav-link" href="/profile">Profile</a>
+                <a class="nav-link" href="/api/user/profile">Profile</a>
               </li>
-              <button type="button" class="remove_button_css" id="logout">Logout</button>
+              <button type="button" class="btn" id="logout">Logout</button>
               {{else}}
               <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>

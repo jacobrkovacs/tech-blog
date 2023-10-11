@@ -21,7 +21,7 @@ const signupHandler = async (e) => {
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/api/user/profile');
         } else {
             alert(response.statusText);
         }

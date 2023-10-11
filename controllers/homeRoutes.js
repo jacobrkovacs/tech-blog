@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 router.get('/login', (req, res) => {
     try {
         if(req.session.logged_in) {
-            res.redirect('/profile');
+            res.redirect('/api/user/profile');
             return;
         }
 
@@ -29,12 +29,12 @@ router.get('/login', (req, res) => {
     } catch (err) {
         res.status(400).json(err)
     }
-})
+});
 
 router.get('/signup', (req, res) => {
     try {
         if(req.session.logged_in) {
-            res.redirect('/profile');
+            res.redirect('/api/user/profile');
             return;
         }
 
@@ -42,6 +42,6 @@ router.get('/signup', (req, res) => {
     } catch (err) {
         res.status(400).json(err)
     }
-})
+});
 
 module.exports = router;
