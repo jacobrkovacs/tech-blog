@@ -68,6 +68,9 @@ router.get('/profile', async (req, res) => {
             include:[
                 {
                     model: Blogpost
+                },
+                {
+                    model: Comment
                 }
             ]
         });
