@@ -1,14 +1,28 @@
 {{#if logged_in}}
 <h2>Welcome {{username}} </h2>
-    {{#each blogposts as |blog|}}
-    <div class=" card my-3 mx-3 col-md-5 ">
-        <h4 class="card-header">{{blog.title}}</h4>
-        <div class="card-body">
-            <p>{{blog.content}}</p>
-            <h5>Comments</h5>
-            <hr>
+<h3>Your Posts</h3>
+    <div class="">
+        {{#each blogposts}}    
+        <div class=" card my-3 mx-3 col-md-5 ">
+            <h4 class="card-header">{{this.title}}</h4>
+            <div class="card-body">
+                <p>{{this.content}}</p>
+                <h5>Comments</h5>
+                <hr>
+                {{#each this.comments}}
+                <p>{{this.content}}</p>
+                <p class="text-muted">Written by {{this.user.username}}</p>
+                {{/each}}
+            </div>
         </div>
+        {{/each}}
     </div>
-    {{/each}}
-            <p>{{comment.content}}</p>
+
+    <h3>Create a New Post</h3>
+    <form class="post-form w-50 container">
+        <div class="form-group">
+            <label for="postTitle">Post Title</label>
+            <input type="text" class="form-control" id="post-title" placeholder="Enter Post Title">
+        </div>
+    </form>
 {{/if}}
