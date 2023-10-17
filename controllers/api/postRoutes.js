@@ -14,4 +14,14 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.post('/newPost', async (req, res) => {
+    try {
+        const addPost = await Blogpost.create(req.body);
+
+        res.status(200).json(addPost);
+    } catch (err) {
+        res.json(err)
+    }
+})
+
 module.exports = router;
