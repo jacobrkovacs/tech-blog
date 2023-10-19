@@ -4,7 +4,7 @@
         <br>
         {{#each blogpost as |blog|}}
         <div class=" card my-3 mx-3 col-md-5 ">
-            <h4 class="card-header">{{blog.title}}</h4>
+            <a class="card-header text-dark" href="/api/post/{{this.id}}"><h4>{{blog.title}}</h4></a>
             <div class="card-body">
                 <small>Written by: {{blog.user.fname}} {{blog.user.lname}}</small>
                 <hr>
@@ -14,7 +14,7 @@
                 {{/unless}}
 
                 {{#if logged_in}}
-                <a class="btn" href="/login">See Comments</a>
+                <a class="btn" href="/api/user/profile">See Comments</a>
                 {{/if}}
             </div>
 

@@ -22,6 +22,26 @@ router.post('/newPost', async (req, res) => {
     } catch (err) {
         res.json(err)
     }
-})
+});
+
+router.get('/:id', withAuth, async (req, res) => {
+    if (!req.session.logged_in) {
+        res.redirect('/login')   
+    };
+
+     try {
+        const singlePost = await Blogpost.findByPk(req.params.id, {
+            include: [{model: User}, {model: Comment}]
+        });
+
+
+        res.render('singlePost', {
+            singlePost,
+            logged_in: req.session.logged_in
+        })
+     } catch (err) {
+        res.json(err)
+     };
+});
 
 module.exports = router;
