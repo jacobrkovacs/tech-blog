@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
         const blogData = await Blogpost.findAll({
             include: [{model: User}, {model: Comment}],
             order: [['date_created', 'DESC']],
-            limit: 5,
+            limit: 10,
         });
         const blogpost = blogData.map((blogpost) => blogpost.get({plain: true}));
         res.render('homepage', {

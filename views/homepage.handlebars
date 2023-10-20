@@ -9,13 +9,7 @@
                 <small>Written by: {{blog.user.fname}} {{blog.user.lname}}</small>
                 <hr>
                 <p>{{blog.content}}</p>
-                {{#unless logged_in}}
-                <button class="btn" href="/login">See Comments</button>
-                {{/unless}}
-
-                {{#if logged_in}}
-                <a class="btn" href="/api/user/profile">See Comments</a>
-                {{/if}}
+                <a class="btn" href="/api/post/{{this.id}}">See Comments</a>
             </div>
 
         </div>

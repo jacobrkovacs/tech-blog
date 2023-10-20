@@ -14,9 +14,12 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.post('/newPost', async (req, res) => {
+router.post('/newPost', withAuth, async (req, res) => {
     try {
-        const addPost = await Blogpost.create(req.body);
+        const addPost = await Blogpost.create({
+            ...req.body,
+            user_id: req.session.user_id
+        });
 
         res.status(200).json(addPost);
     } catch (err) {

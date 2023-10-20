@@ -13,11 +13,8 @@ const addPostFormHandler = async (e) => {
             }),
             headers: { 'Content-Type': 'application/json' }
         });
-
         if(response.ok) {
-            document.location.reload();
-        } else {
-            alert(response.statusText);
+            alert("Post Added Succesfully!")
         }
     }
 };
